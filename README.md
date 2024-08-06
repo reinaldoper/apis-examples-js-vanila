@@ -2,7 +2,7 @@
 
 Esta é uma aplicação frontend desenvolvida em JavaScript puro (Vanilla JS), que consome diversas APIs, incluindo:
 
-- **Gigiomons**: Renderiza uma lista de Gigiomons.
+- **Digimons**: Renderiza uma lista de Digimons.
 - **Piadas de Chuck Norris**: Exibe piadas aleatórias de Chuck Norris.
 - **Produtos**: Lista e exibe produtos.
 - **Pokémon**: Permite ao usuário pesquisar por um Pokémon.
