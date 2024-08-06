@@ -2,4 +2,5 @@ pv.yml
 pvc.yml
 Dockerfile
 mysql.yml
+start.sh
 .env

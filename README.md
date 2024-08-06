@@ -35,9 +35,9 @@ Certifique-se de ter o seguinte instalado:
 
 1. Inicie o Minikube:
 
-   ```bash
-   minikube start
-   ```
+  ```bash
+  minikube start
+  ```
 2. Aplique o deployment no cluster:
 
   ```bash
