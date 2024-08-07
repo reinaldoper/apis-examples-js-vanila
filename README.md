@@ -47,7 +47,7 @@ Certifique-se de ter o seguinte instalado:
 3. Exponha o serviço:
 
   ```bash
-  kubectl expose deployment client --type=NodePort --port=80
+  kubectl expose deployment client-deployment --type=LoadBalancer --name=client --port=80
   ```
 4. Acesse a aplicação:
   
@@ -56,4 +56,4 @@ Certifique-se de ter o seguinte instalado:
   ```
 
 ### Deployment
-- O arquivo simple-deployment.yml contém a configuração do deployment. Ele utiliza a imagem Docker rei200201/app-js:2.6
+- O arquivo simple-deployment.yml contém a configuração do deployment. Ele utiliza a imagem Docker rei200201/app-js:3.0

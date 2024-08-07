@@ -6,14 +6,18 @@ import apiDigimons from "./apiDigimons.js";
 import { handleClickDark } from "./handleClickDark.js";
 import { handleClickProducts } from "./handleClickProducts.js";
 import { handlePoke } from "./handlePoke.js";
+import { target } from "./target.js";
+import { removal } from "./removal.js";
 
 
 let POKE = ''
 const button = createButton('Click me', () => handleClick('Check Norris', 'Cats'));
 const button2 = createButton('Mode_Dark', () => handleClickDark());
 const button3 = createButton('Products', () => handleClickProducts());
+const button5 = createButton('Target', () => target());
 const input = document.createElement('input');
 const button4 = createButton('PokeApi', () => handlePoke(POKE));
+
 
 const main = () => {
     const title = document.getElementById('title');
@@ -39,15 +43,21 @@ const handleClick = async (arg1, arg2) => {
     if (button3) button3.remove();
     if (input) input.remove();
     if (button4) button4.remove();
+    if (button5) button5.remove();
     const ulRemove = document.querySelector('ul');
     if (ulRemove) {
         ulRemove.remove();
     }
+    
 
-    if (document.querySelector('div')) {
-        document.querySelector('div').remove();
+    removal();
+
+    const divRemove = document.querySelector('div');
+    if (divRemove) {
+        divRemove.remove();
     }
 
+    
     
     const h2 = document.createElement('h2');
     h2.innerText = `Apis: ${arg1} ${arg2}`;
@@ -97,6 +107,7 @@ const handleClick = async (arg1, arg2) => {
     h4.appendChild(button);
     h4.appendChild(button2);
     h4.appendChild(button3);
+    h4.appendChild(button5);
     h4.style.justifyContent = 'center';
     input.style.display = 'flex';
     input.placeholder = 'Digite o nome do Pokémon';

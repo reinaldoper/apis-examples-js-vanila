@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: rei200201/app-js:2.6
+        image: rei200201/app-js:3.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80

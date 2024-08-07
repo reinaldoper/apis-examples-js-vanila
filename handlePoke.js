@@ -1,4 +1,5 @@
 import { pokeApi } from "./pokeApi.js";
+import { removal } from "./removal.js";
 
 export const handlePoke = async (poke) => {
   console.log(poke);
@@ -14,7 +15,7 @@ export const handlePoke = async (poke) => {
     existingDiv.remove();
   }
 
-  
+  removal();
   const div = document.createElement('div');
   div.innerText = 'Loading...';
   div.style.color = 'gray';

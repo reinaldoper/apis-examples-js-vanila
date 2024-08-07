@@ -1,4 +1,8 @@
+import { removal } from "./removal.js";
+
 export const apiProdutos = async () => {
+
+  removal();
   const response = await fetch('https://servicodados.ibge.gov.br/api/v1/produtos/geociencias');
   const data = await response.json();
 
