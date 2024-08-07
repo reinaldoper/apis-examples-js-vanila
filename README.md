@@ -56,4 +56,4 @@ Certifique-se de ter o seguinte instalado:
   ```
 
 ### Deployment
-- O arquivo simple-deployment.yml contém a configuração do deployment. Ele utiliza a imagem Docker rei200201/app-js:3.0
+- O arquivo simple-deployment.yml contém a configuração do deployment. Ele utiliza a imagem Docker rei200201/app-js:3.1

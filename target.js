@@ -1,3 +1,5 @@
+import { removal } from './removal.js';
+
 export const target = () => {
   const ulRemove = document.querySelector('ul');
   if (ulRemove) {
@@ -19,6 +21,8 @@ export const target = () => {
   if(imgPoke){
     imgPoke.remove();
   }
+
+  removal()
 
 
   let COLOR = ''
