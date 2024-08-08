@@ -44,21 +44,9 @@ const handleClick = async (arg1, arg2) => {
     if (input) input.remove();
     if (button4) button4.remove();
     if (button5) button5.remove();
-    const ulRemove = document.querySelector('ul');
-    if (ulRemove) {
-        ulRemove.remove();
-    }
-    
 
     removal();
 
-    const divRemove = document.querySelector('div');
-    if (divRemove) {
-        divRemove.remove();
-    }
-
-    
-    
     const h2 = document.createElement('h2');
     h2.innerText = `Apis: ${arg1} ${arg2}`;
     h2.style.color = 'blue';

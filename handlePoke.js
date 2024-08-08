@@ -2,19 +2,6 @@ import { pokeApi } from "./pokeApi.js";
 import { removal } from "./removal.js";
 
 export const handlePoke = async (poke) => {
-  console.log(poke);
-  if (!poke) return;
-
-  const ulRemove = document.querySelector('ul');
-  if (ulRemove) {
-    ulRemove.remove();
-  }
-
-  const existingDiv = document.querySelector('div');
-  if (existingDiv) {
-    existingDiv.remove();
-  }
-
   removal();
   const div = document.createElement('div');
   div.innerText = 'Loading...';

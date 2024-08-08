@@ -1,27 +1,6 @@
 import { removal } from './removal.js';
 
 export const target = () => {
-  const ulRemove = document.querySelector('ul');
-  if (ulRemove) {
-    ulRemove.remove();
-  }
-
-  const existingDiv = document.querySelector('div');
-  if (existingDiv) {
-    existingDiv.remove();
-  }
-
-  const img = document.querySelectorAll('img');
-  if (img.length >= 2) {
-    img[0].remove();
-    img[1].remove();
-  }
-
-  const imgPoke = document.querySelector('img');
-  if(imgPoke){
-    imgPoke.remove();
-  }
-
   removal()
 
 
@@ -91,7 +70,7 @@ export const target = () => {
   document.body.appendChild(backGround);
 
 
-const backGroundTarget = document.createElement('div');
+const backGroundTarget = document.createElement('h5');
 backGroundTarget.classList.add('backGround');
 backGroundTarget.style.margin = '10px auto'; 
 backGroundTarget.style.display = 'flex';
