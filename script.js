@@ -9,6 +9,7 @@ import { handlePoke } from "./handlePoke.js";
 import { target } from "./target.js";
 import { removal } from "./removal.js";
 import { renderProjects } from "./renderProjects.js";
+import { renderAngular } from "./renderAngular.js";
 
 
 let POKE = ''
@@ -16,6 +17,7 @@ const button = createButton('Click me', () => handleClick('Check Norris', 'Cats'
 const button2 = createButton('Mode_Dark', () => handleClickDark());
 const button3 = createButton('Products', () => handleClickProducts());
 const button5 = createButton('Target', () => target());
+const button7 = createButton('Render-Angular', () => renderAngular());
 const button6 = createButton('Render-projects', () => renderProjects());
 const input = document.createElement('input');
 const button4 = createButton('PokeApi', () => handlePoke(POKE));
@@ -34,7 +36,7 @@ const main = () => {
     title.innerText = 'Api Examples';
 
     document.body.appendChild(button);
-   
+    
 }
 
 
@@ -47,8 +49,17 @@ const handleClick = async (arg1, arg2) => {
     if (button4) button4.remove();
     if (button5) button5.remove();
     if (button6) button6.remove();
+    if (button7) button7.remove();
 
     removal();
+
+    const elementWithBg = document.querySelector('.h4-button'); 
+    if (elementWithBg && elementWithBg.style.backgroundColor === 'lightgray') { 
+        elementWithBg.remove(); 
+        console.log('backgroundColor removido');
+    } else {
+        console.log('Elemento não encontrado ou backgroundColor diferente');
+    }
 
     const h2 = document.createElement('h2');
     h2.innerText = `Apis: ${arg1} ${arg2}`;
@@ -99,16 +110,19 @@ const handleClick = async (arg1, arg2) => {
     h4.appendChild(button2);
     h4.appendChild(button3);
     h4.appendChild(button5);
+    h4.appendChild(button7);
     h4.appendChild(button6);
+    h4.style.backgroundColor = 'lightgray';
     h4.style.justifyContent = 'center';
+    h4.classList.add('h4-button');
+    h4.style.padding = '10px';
     input.style.display = 'flex';
-    input.placeholder = 'Digite o nome do Pokémon';
+    input.placeholder = 'Pokémon';
     input.style.justifyContent = 'center';
     input.style.padding = '10px';
-    input.style.width = '200px';
+    input.style.width = '100px';
     input.style.borderRadius = '10px';
     input.style.border = 'none';
-    input.style.background = 'lightgray';
     input.addEventListener('change', (e) => {
         POKE = e.target.value;
     })
