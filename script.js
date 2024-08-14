@@ -46,6 +46,7 @@ const handleClick = async (arg1, arg2) => {
     if (input) input.remove();
     if (button4) button4.remove();
     if (button5) button5.remove();
+    if (button6) button6.remove();
 
     removal();
 
