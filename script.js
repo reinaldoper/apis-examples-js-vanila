@@ -8,6 +8,7 @@ import { handleClickProducts } from "./handleClickProducts.js";
 import { handlePoke } from "./handlePoke.js";
 import { target } from "./target.js";
 import { removal } from "./removal.js";
+import { renderProjects } from "./renderProjects.js";
 
 
 let POKE = ''
@@ -15,6 +16,7 @@ const button = createButton('Click me', () => handleClick('Check Norris', 'Cats'
 const button2 = createButton('Mode_Dark', () => handleClickDark());
 const button3 = createButton('Products', () => handleClickProducts());
 const button5 = createButton('Target', () => target());
+const button6 = createButton('Render-projects', () => renderProjects());
 const input = document.createElement('input');
 const button4 = createButton('PokeApi', () => handlePoke(POKE));
 
@@ -96,6 +98,7 @@ const handleClick = async (arg1, arg2) => {
     h4.appendChild(button2);
     h4.appendChild(button3);
     h4.appendChild(button5);
+    h4.appendChild(button6);
     h4.style.justifyContent = 'center';
     input.style.display = 'flex';
     input.placeholder = 'Digite o nome do Pokémon';
